@@ -95,6 +95,9 @@
 		A81DEC181F71B7440081EABD /* Currency-converter */ = {
 			isa = PBXGroup;
 			children = (
+				A81DEC491F71B9A30081EABD /* Model */,
+				A81DEC481F71B99D0081EABD /* View */,
+				A81DEC471F71B9900081EABD /* Controller */,
 				A81DEC191F71B7440081EABD /* AppDelegate.swift */,
 				A81DEC1D1F71B7440081EABD /* Main.storyboard */,
 				A81DEC201F71B7440081EABD /* Assets.xcassets */,
@@ -120,6 +123,27 @@
 				A81DEC3B1F71B7450081EABD /* Info.plist */,
 			);
 			path = "Currency-converterUITests";
+			sourceTree = "<group>";
+		};
+		A81DEC471F71B9900081EABD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A81DEC481F71B99D0081EABD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A81DEC491F71B9A30081EABD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
