@@ -17,5 +17,5 @@ enum SegueString: String {
 }
 
 enum URLString: String {
-    case calculationData = "http://fixer.io/"
+    case calculationData = "http://api.fixer.io/latest?base=USD"
 }

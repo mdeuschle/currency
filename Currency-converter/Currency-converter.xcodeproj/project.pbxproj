@@ -17,6 +17,7 @@
 		A81DEC4D1F71C13B0081EABD /* FlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DEC4C1F71C13B0081EABD /* FlagCell.swift */; };
 		A81DEC4F1F71C8100081EABD /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DEC4E1F71C8100081EABD /* CalculatorVC.swift */; };
 		A81DEC531F71C8F90081EABD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DEC521F71C8F90081EABD /* Constants.swift */; };
+		A81DEC551F71CE450081EABD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DEC541F71CE450081EABD /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A81DEC4C1F71C13B0081EABD /* FlagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagCell.swift; sourceTree = "<group>"; };
 		A81DEC4E1F71C8100081EABD /* CalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		A81DEC521F71C8F90081EABD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A81DEC541F71CE450081EABD /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		A81DEC181F71B7440081EABD /* Currency-converter */ = {
 			isa = PBXGroup;
 			children = (
+				A81DEC561F71D0B50081EABD /* Services */,
 				A81DEC511F71C8DE0081EABD /* Util */,
 				A81DEC491F71B9A30081EABD /* Model */,
 				A81DEC481F71B99D0081EABD /* View */,
@@ -154,6 +157,7 @@
 		A81DEC491F71B9A30081EABD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A81DEC541F71CE450081EABD /* Currency.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -164,6 +168,13 @@
 				A81DEC521F71C8F90081EABD /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		A81DEC561F71D0B50081EABD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81DEC551F71CE450081EABD /* Currency.swift in Sources */,
 				A81DEC531F71C8F90081EABD /* Constants.swift in Sources */,
 				A81DEC4F1F71C8100081EABD /* CalculatorVC.swift in Sources */,
 				A81DEC4B1F71C09D0081EABD /* RootVC.swift in Sources */,

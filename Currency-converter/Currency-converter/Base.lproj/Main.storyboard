@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFW-nd-QgJ">
-                                        <rect key="frame" x="109" y="21" width="157" height="53"/>
+                                        <rect key="frame" x="109" y="26" width="157" height="53"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C4g-Wk-63M">
                                                 <rect key="frame" x="10" y="10" width="137" height="33"/>
@@ -54,10 +54,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="sFW-nd-QgJ" secondAttribute="bottom" constant="21" id="2Jw-HL-tcg"/>
+                                    <constraint firstAttribute="bottom" secondItem="sFW-nd-QgJ" secondAttribute="bottom" constant="16" id="2Jw-HL-tcg"/>
                                     <constraint firstItem="sFW-nd-QgJ" firstAttribute="leading" secondItem="lyo-HF-vjd" secondAttribute="leading" constant="109" id="MIS-if-Qtf"/>
                                     <constraint firstAttribute="trailing" secondItem="sFW-nd-QgJ" secondAttribute="trailing" constant="109" id="Nad-ub-ryH"/>
-                                    <constraint firstItem="sFW-nd-QgJ" firstAttribute="top" secondItem="lyo-HF-vjd" secondAttribute="top" constant="21" id="aGw-vc-CYo"/>
+                                    <constraint firstItem="sFW-nd-QgJ" firstAttribute="top" secondItem="lyo-HF-vjd" secondAttribute="top" constant="26" id="aGw-vc-CYo"/>
                                     <constraint firstAttribute="height" constant="95" id="tcN-jN-eVW"/>
                                 </constraints>
                             </view>
