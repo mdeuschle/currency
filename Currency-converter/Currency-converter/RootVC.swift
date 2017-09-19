@@ -11,13 +11,20 @@ import UIKit
 class RootVC: UIViewController {
 
     @IBOutlet var ratesTableView: UITableView!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     var rates = [Rate]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ratesTableView.delegate = self
+        ratesTableView.dataSource = self
         rates.removeAll()
+        spinner.isHidden = false
+        spinner.startAnimating()
         CurrencyService.shared.getCurrencyData { (success, rates) in
             if success {
+                self.spinner.isHidden = true
+                self.spinner.stopAnimating()
                 if let unwrappedRates = rates {
                     self.rates = unwrappedRates
                     self.ratesTableView.reloadData()
@@ -34,11 +41,16 @@ extension RootVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return rates.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return FlagCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReusableCell.flag.rawValue) as? FlagCell else {
+            return FlagCell()
+        }
+        let rate = rates[indexPath.row]
+        cell.configCell(rate: rate)
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

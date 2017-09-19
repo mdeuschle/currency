@@ -17,4 +17,9 @@ class FlagCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
+    func configCell(rate: Rate) {
+        countryNameLabel.text = rate.countryCode
+        countryCurrencyLabel.text = String(rate.currentRate)
+    }
 }
