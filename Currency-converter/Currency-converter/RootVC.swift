@@ -13,6 +13,10 @@ class RootVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        CurrencyService.shared.getCurrencyData { (success) in
+            print(success)
+        }
+
     }
 
 }
