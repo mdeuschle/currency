@@ -127,6 +127,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ratesTableView" destination="xiV-2o-Ued" id="3nq-IO-QwD"/>
                         <segue destination="3AB-r7-2AB" kind="show" identifier="goToCalculator" id="06C-JE-nvz"/>
                     </connections>
                 </viewController>

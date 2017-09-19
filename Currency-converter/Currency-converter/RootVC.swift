@@ -10,15 +10,21 @@ import UIKit
 
 class RootVC: UIViewController {
 
+    @IBOutlet var ratesTableView: UITableView!
+    var rates = [Rate]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        CurrencyService.shared.getCurrencyData { (success) in
-            print(success)
+        rates.removeAll()
+        CurrencyService.shared.getCurrencyData { (success, rates) in
+            if success {
+                if let unwrappedRates = rates {
+                    self.rates = unwrappedRates
+                    self.ratesTableView.reloadData()
+                }
+            }
         }
-
     }
-
 }
 
 extension RootVC: UITableViewDelegate, UITableViewDataSource {
