@@ -75,7 +75,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rdx-GL-ZTF" id="0bV-Xs-d9v">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="sME-8e-x3Q">
@@ -223,8 +223,10 @@
                     </view>
                     <connections>
                         <outlet property="baseCurrencyAmountLabel" destination="BWo-9f-feJ" id="skH-4m-bb9"/>
+                        <outlet property="baseTextField" destination="BWo-9f-feJ" id="ofJ-yT-V4u"/>
                         <outlet property="selectedCountryLabel" destination="nad-CN-BhK" id="kpR-PN-vSj"/>
                         <outlet property="selectedCurrencyAmountLabel" destination="5Ih-Aw-RCc" id="Ok8-4j-2HW"/>
+                        <outlet property="selectedCurrencyTextField" destination="5Ih-Aw-RCc" id="T36-i6-d58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHm-vb-RgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
