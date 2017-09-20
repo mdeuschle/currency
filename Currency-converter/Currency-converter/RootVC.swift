@@ -23,12 +23,23 @@ class RootVC: UIViewController {
         spinner.startAnimating()
         CurrencyService.shared.getCurrencyData { (success, rates) in
             if success {
-                self.spinner.isHidden = true
-                self.spinner.stopAnimating()
-                if let unwrappedRates = rates {
-                    self.rates = unwrappedRates
-                    self.ratesTableView.reloadData()
+                DispatchQueue.main.async {
+                    self.spinner.isHidden = true
+                    self.spinner.stopAnimating()
+                    if let unwrappedRates = rates {
+                        self.rates = unwrappedRates
+                        self.ratesTableView.reloadData()
+                    }
                 }
+            }
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueString.goToCalculator.rawValue {
+            if let destination = segue.destination as? CalculatorVC {
+                guard let selectedRow = ratesTableView.indexPathForSelectedRow?.row else { return }
+                destination.rate = rates[selectedRow]
             }
         }
     }

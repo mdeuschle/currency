@@ -16,8 +16,16 @@ class CalculatorVC: UIViewController {
     @IBOutlet var baseTextField: UITextField!
     @IBOutlet var selectedCurrencyTextField: UITextField!
 
+    var rate: Rate!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("RATE NAME: \(rate.countryCode)")
+
+    }
+
+    func stylizeView() {
         addDoneButton()
         baseTextField.font = .systemFont(ofSize: 32)
         selectedCurrencyTextField.font = .systemFont(ofSize: 32)
