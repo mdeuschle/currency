@@ -20,15 +20,16 @@ class CalculatorVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("RATE NAME: \(rate.countryCode)")
-
+        stylizeView()
+        baseTextField.addTarget(self, action: #selector(CalculatorVC.textfieldDidChange(_:)), for: .editingChanged)
     }
 
     func stylizeView() {
         addDoneButton()
         baseTextField.font = .systemFont(ofSize: 32)
         selectedCurrencyTextField.font = .systemFont(ofSize: 32)
+        selectedCountryLabel.text = rate.countryCode
+        selectedCurrencyTextField.text = String(rate.currentRate)
     }
 
     func addDoneButton() {
@@ -36,12 +37,26 @@ class CalculatorVC: UIViewController {
         toolbarDone.sizeToFit()
         let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(CalculatorVC.dismissVC))
         toolbarDone.items = [doneBarButtonItem]
-        baseTextField.inputAccessoryView = toolbarDone        
+        baseTextField.inputAccessoryView = toolbarDone
     }
 
     func dismissVC() {
         dismiss(animated: true, completion: nil)
     }
 
+    func textfieldDidChange(_ textField: UITextField) {
+        if let baseRate = baseTextField.text {
+            guard let doubleBaseRate = Double(baseRate) else { return }
+            selectedCurrencyTextField.text = String(rate.calculateRate(baseRate: doubleBaseRate))
+        }
+    }
 }
+
+
+
+
+
+
+
+
 

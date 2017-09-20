@@ -21,5 +21,6 @@ class FlagCell: UITableViewCell {
     func configCell(rate: Rate) {
         countryNameLabel.text = rate.countryCode
         countryCurrencyLabel.text = String(rate.currentRate)
+        flagImageView.image = UIImage(named: rate.countryCode) ?? #imageLiteral(resourceName: "USD")
     }
 }

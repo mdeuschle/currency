@@ -24,6 +24,11 @@ struct Rate {
         _countryCode = countryCode
         _currentRate = currentRate
     }
+
+    func calculateRate(baseRate: Double) -> Double {
+        let tempInt = Int(_currentRate * baseRate * 100)
+        return Double(tempInt) / 100
+    }
 }
 
 
